@@ -1,0 +1,29 @@
+.wrapper {
+  display: flex;
+  align-items: stretch;
+  min-height: 100vh;
+}
+
+#page-content-wrapper {
+  width: 100%;
+  height: px;
+}
+
+
+#content{
+    min-height: 90vh;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+
+.footer {
+  background-position: center center;
+  width: 100%;
+  min-height: 3.5vh;
+  border-top: 1px solid #d5d5d5 ;
+}

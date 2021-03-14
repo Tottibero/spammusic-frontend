@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Spam-Music"
+    }
+  },
+  "defaultProject": "Spam-Music",
+  "cli": {
+    "analytics": false
+  }
 }
