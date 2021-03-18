@@ -1,0 +1,15 @@
+{
+    "Username": "Username",
+    "Password": "Password",
+    "Email": "Email",
+    "EmailReq": "Email is required and must be valid",
+    "ConPassword": "Confirm password",
+    "Submit": "Submit",
+    "Home": "Home",
+    "Discs": "Discs",
+    "Calendar": "Calendar",
+    "Anticipated": "Anticipated",
+    "Statistics": "Statistics",
+    "Terms": "I agree with all terms",
+    "Sign": "Sign up"
+}

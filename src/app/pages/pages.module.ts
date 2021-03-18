@@ -7,6 +7,10 @@ import { HomeComponent } from './home/home.component';
 import { DiscsComponent } from './discs/discs.component';
 import { PagesComponent } from './pages.component';
 import { SharedModule } from '../shared/shared.module';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
+import { CalendarComponent } from './calendar/calendar.component';
+import { AnticipatedComponent } from './anticipated/anticipated.component';
+import { StatisticsComponent } from './statistics/statistics.component';
 
 
 
@@ -14,7 +18,11 @@ import { SharedModule } from '../shared/shared.module';
   declarations: [
     HomeComponent,
     DiscsComponent,
-    PagesComponent  
+    PagesComponent,
+    AccountSettingsComponent,
+    CalendarComponent,
+    AnticipatedComponent,
+    StatisticsComponent  
   ],
   imports: [
     CommonModule,

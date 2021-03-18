@@ -5,46 +5,24 @@
     </div>
 
     <ul class="list-unstyled components">
-        <li>
-            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                <i class="fas fa-home"></i>
-                Home
-            </a>
-            <ul class="collapse list-unstyled" id="homeSubmenu">
-                <li>
-                    <a href="#">Home 1</a>
-                </li>
-                <li>
-                    <a href="#">Home 2</a>
-                </li>
-                <li>
-                    <a href="#">Home 3</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="#" >
-                <i class="fas fa-briefcase"></i>
-                About
-            </a>
-    
-
-            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                <i class="fas fa-copy"></i>
-                Pages
-            </a>
-            <ul class="collapse list-unstyled" id="pageSubmenu">
-                <li>
-                    <a href="#">Page 1</a>
-                </li>
-                <li>
-                    <a href="#">Page 2</a>
-                </li>
-                <li>
-                    <a href="#">Page 3</a>
-                </li>
-            </ul>
+        <li *ngFor="let item of menuItems">
+            <ng-container *ngIf="item.url === 'parent' ; else noSubItems">
+                <a [href]="'#'+item.title+'submenu' | lowercase" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i [class]="item.icon"></i>
+                    {{ item.title | translate}}
+                </a>
+                <ul class="collapse list-unstyled" [attr.id]="item.title+'submenu' | lowercase">
+                    <li *ngFor="let subItem of item.subMenu">
+                        <a [routerLink]="subItem.url" routerLinkActive="active">{{subItem.title | translate}}</a>
+                    </li>
+                </ul>    
+                </ng-container>
+            <ng-template #noSubItems>
+                <a [routerLink]="item.url"  routerLinkActive="active">
+                    <i [class]="item.icon"></i>
+                    {{ item.title | translate}}
+                </a>
+            </ng-template>
         </li>
     </ul>
-
 </nav>

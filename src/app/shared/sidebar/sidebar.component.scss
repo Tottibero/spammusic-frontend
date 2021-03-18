@@ -47,6 +47,13 @@ a, a:hover, a:focus {
     color: #fff;
     background: #f31e73;
 }
+
+#sidebar ul li>a.active {
+    color: #fff;
+    background: #f31e73;
+}
+
+
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;

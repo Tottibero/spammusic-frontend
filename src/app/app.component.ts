@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 
 @Component({
@@ -7,11 +8,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
-  title = 'Spam-Music';
+
+  //Utilizamos el lenguaje del navegador
+   userLang = navigator.language;
+
+
+  constructor(
+    public translate: TranslateService
+  ){
+    translate.addLangs(['en', 'es']);
+    translate.setDefaultLang(this.userLang);
+  }
+
   ngOnInit(){
 
 
 }
+
 
 
 }

@@ -1,0 +1,16 @@
+{
+    "Username": "Nombre de usuario",
+    "UsernameReq": "El nombre de usuario debe de ser valido y tener cuatro caracteres",
+    "Email": "Email",
+    "EmailReq": "Email is required and must be valid",
+    "Password": "Contraseña",
+    "ConPassword": "Confirma la contraseña",
+    "Submit": "Enviar",
+    "Home": "Principal",
+    "Discs": "Discos",
+    "Calendar": "Calendario",
+    "Anticipated": "Esperados",
+    "Statistics": "Estadisticas",
+    "Terms": "Acepto los terminos y condiciones",
+    "Sign": "Registrate"
+}

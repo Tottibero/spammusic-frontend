@@ -12,13 +12,9 @@ export class PagesComponent implements OnInit {
   title = 'Spam-Music';
   ngOnInit() {
 
-
-    $('#sidebarCollapse').on('click', function () {
-      $('#sidebar').toggleClass('active');
-      $(this).toggleClass('active');
-    });
-
   }
+
+
 
 }
 
