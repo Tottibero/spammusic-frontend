@@ -7,45 +7,58 @@
                 </div>
             </div>
             <div class="d-flex justify-content-center form_container">
-                <form
-                [formGroup]="registerForm" 
-                autocomplete="off"
-                (ngSubmit)="createUser()">
+                <form [formGroup]="registerForm" autocomplete="off" (ngSubmit)="createUser()">
                     <div class="input-group mb-2 mt-2">
-                        <input type="text" formControlName="username" class="form-control input_user is-invalid"  [attr.placeholder]="'Username' | translate">
-                        <div class="invalid-tooltip" *ngIf="fieldNoValid('username')">
+                        <input type="text" formControlName="username" class="form-control input_user"
+                            [attr.placeholder]="'Username' | translate" [class]="isValid('username')"
+                            >
+                        <div class="invalid-tooltip" *ngIf="isValid('username') === 'is-invalid'">
                             {{ 'UsernameReq' | translate}}
                         </div>
                     </div>
                     <div class="input-group mb-2">
-                        <input type="email" formControlName="email" class="form-control input_user"  [attr.placeholder]="'Email' | translate">
-                        <div class="invalid-tooltip" *ngIf="fieldNoValid('email')">
-                            {{ 'EmailReq' | translate}}
+                        <input type="email" formControlName="email" class="form-control input_user" 
+                            [attr.placeholder]="'Email' | translate"  [class]="isValid('email')">
+                            <div class="invalid-tooltip" *ngIf="isValid('email') === 'is-invalid'">
+                                {{ 'EmailReq' | translate}}
                         </div>
                     </div>
                     <div class="input-group mb-2">
-                        <input type="password" formControlName="password1" class="form-control input_pass"  [attr.placeholder]="'Password' | translate">
+                        <input type="password" formControlName="password" class="form-control input_pass"
+                            [attr.placeholder]="'Password' | translate" [class]="isValid('password2')">
                     </div>
                     <div class="input-group mb-2">
-                        <input type="password" formControlName="password2" class="form-control input_pass"  [attr.placeholder]="'ConPassword' | translate">
+                        <input type="password" formControlName="password2" class="form-control input_pass"
+                            [attr.placeholder]="'ConPassword' | translate" [class]="isValid('password2')">
+                            <div class="invalid-tooltip" *ngIf="isValid('password2') === 'is-invalid'">
+                                {{ 'PassReq' | translate}}
+                            </div>        
                     </div>
                     <div class="form-group">
                         <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="customControlInline" formControlName="terms">
-                            <label class="custom-control-label color-pink" for="customControlInline" [innerHTML]="'Terms' | translate"></label>
+                            <input type="checkbox" class="custom-control-input" id="customControlInline"
+                                formControlName="terms">
+                            <label class="custom-control-label color-pink" for="customControlInline"
+                                [innerHTML]="'Terms' | translate"></label>
+                            <div class="row">
+                                <div class="col-10">
+                                    <p *ngIf="acceptTerms()" class="bg-danger text-white"> {{ 'TermsReq' | translate}} </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    
-                        <div class="d-flex justify-content-center mt-3 login_container">
-                 <button type="submit" name="button" class="btn login_btn" [innerHTML]="'Sign' | translate"></button>
-               </div>
+
+                    <div class="d-flex justify-content-center mt-3 login_container">
+                        <button type="submit" name="button" class="btn login_btn"
+                            [innerHTML]="'Sign' | translate"></button>
+                    </div>
                 </form>
             </div>
-    
+
             <div class="mt-4">
                 <div class="d-flex justify-content-center links color-pink">
-                    Already have an account? <a routerLink="/login" class="ml-2" class="text-white">  Log in</a>
+                    Already have an account? <a routerLink="/login" class="ml-2" class="text-white"> Log in</a>
                 </div>
                 <div class="d-flex justify-content-center links">
                     <a href="#" class="text-white">Forgot your password?</a>
@@ -54,5 +67,3 @@
         </div>
     </div>
 </div>
-
-

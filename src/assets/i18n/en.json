@@ -1,8 +1,10 @@
 {
     "Username": "Username",
     "Password": "Password",
+    "PassReq": "Passwords must be the same and contain at least 6 characters",
     "Email": "Email",
     "EmailReq": "Email is required and must be valid",
+    "TermsReq": "You must accept the terms",
     "ConPassword": "Confirm password",
     "Submit": "Submit",
     "Home": "Home",
@@ -11,5 +13,10 @@
     "Anticipated": "Anticipated",
     "Statistics": "Statistics",
     "Terms": "I agree with all terms",
-    "Sign": "Sign up"
+    "Sign": "Sign up",
+    "usernameError": "Username is already used",
+    "emailError": "Email is already used",
+    "loginError": "Email or password are incorrect",
+    "commonError": "Unexpected error, try again later."
+
 }

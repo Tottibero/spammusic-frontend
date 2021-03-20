@@ -7,11 +7,13 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
 import { StatisticsComponent } from './statistics/statistics.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { AnticipatedComponent } from './anticipated/anticipated.component';
+import { AuthGuard } from '../guards/auth.guard';
 
 const routes: Routes = [
 
     {path: '', 
     component: PagesComponent,
+    canActivate: [AuthGuard],
     children: [
       {path: 'home', component: HomeComponent, data:{
         title: 'Home'

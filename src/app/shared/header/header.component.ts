@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { UserService } from '../../auth/services/user.service';
 
 
 @Component({
@@ -12,7 +13,8 @@ export class HeaderComponent implements OnInit {
   classApplied = false;
 
   constructor(
-    public translate: TranslateService
+    public translate: TranslateService,
+    private userService: UserService
   ){
   }
 
@@ -26,7 +28,12 @@ export class HeaderComponent implements OnInit {
   switchLang(lang: string) {
     this.translate.use(lang);
   }
+
+  logout(){
+    this.userService.logout();
+  }
   
+
 
 
 }

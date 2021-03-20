@@ -1,9 +1,13 @@
 {
     "Username": "Nombre de usuario",
-    "UsernameReq": "El nombre de usuario debe de ser valido y tener cuatro caracteres",
+    "UsernameReq": "El nombre de usuario debe de ser valido y tener al menos cuatro caracteres",
+    "usernameError": "El alias ya esta en uso",
     "Email": "Email",
-    "EmailReq": "Email is required and must be valid",
+    "EmailReq": "El email es obligatorio y tiene que ser valido",
+    "emailError": "El email esta en uso",
+    "TermsReq": "Debes aceptar los terminos",
     "Password": "Contraseña",
+    "PassReq": "Ambas contraseñas deben de coincidir y contener 6 caracteres",
     "ConPassword": "Confirma la contraseña",
     "Submit": "Enviar",
     "Home": "Principal",
@@ -12,5 +16,7 @@
     "Anticipated": "Esperados",
     "Statistics": "Estadisticas",
     "Terms": "Acepto los terminos y condiciones",
-    "Sign": "Registrate"
+    "Sign": "Registrate",
+    "loginError": "El correo o la contraseña son incorrectos",
+    "commonError": "Error inexperado, intentelo mas tarde"
 }
